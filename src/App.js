@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef, createContext } from "react";
+import CharacterAttributes from "./CharacterAttributes"; 
+import TodoList from "./TodoList";
+import ImageGallery from "./ImageGallery";
+import Username from "./UserName";
+import Product from "./Product";
+import FactoryStatus from "./FactoryStatus";
+
+const items = [ { text: 'Buy grocery', done: true },
+  { text: 'Play guitar', done: false },
+  { text: 'Romantic dinner', done: false }
+];
+const links = ["https://bit.ly/3xXPxPR", "https://bit.ly/4de3sQr"];
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FactoryStatus />
   );
 }
 
